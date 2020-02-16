@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css?family=Abel|Barlow+Condensed|Cantarell|Comfortaa|Karla|M+PLUS+1p|Oxygen|Quattrocento+Sans&display=swap');
+:root{
+    --main-bg-color : #117A65;
+    --navbar-font : 'Comfortaa', cursive; 
+    --table-font : 'Abel', sans-serif;;
+    --header-font : 'Comfortaa', cursive;
+    --row-font : 'Cantarell', sans-serif;
+}
+html{
+    min-height: 100%;
+    width: 100%;
+}
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    
+}
+nav{
+    background-color: var(--main-bg-color) !important;
+}
+.navbar-brand{
+    font-family: var(--navbar-font) !important;    
+}
+.detection{
+    font-family: var(--header-font) !important;
+}
+.detection::selection, .detection > b::selection{
+    color: white;
+    background-color: black;
+}
+tr{
+    font-family: var(--row-font) !important;
+     
+}
+td::selection{
+    color: white;
+    background-color: var(--main-bg-color);
+}
+th::selection{
+    background-color: yellow;
+    color: black;
+}
+thead{
+    background-color: var(--main-bg-color) !important;
+    font-family: var(--table-font) !important;
+}
+.page-footer{
+    background-color: var(--main-bg-color) !important;
+    height: 12vh !important;  
+}
+.fab{
+    text-decoration: none !important;
+    color: white;
+}
+.fab:hover{
+    transform: scale(1.8);
+}
+.fa-instagram:hover{
+    color: #e4405f;
+}
+.fa-facebook-f:hover{
+    color: #3b5999;
+}
+.fa-twitter:hover{
+    color: #55acee;
+}
+.fa-github:hover{
+    color: #131418;
+}
+#social-media-container{
+    display: none;
+}
+.page-footer:hover  #social-media-container{
+    display: block;
+}
+.page-footer:hover{
+    height: 20vh !important;
+}
+@media only screen and (max-width: 768px) {
+    .page-footer{
+        height: 15vh !important;
+    }
+
+}
+/*
+font-family: 'Oxygen', sans-serif;
+font-family: 'Karla', sans-serif;
+font-family: 'Abel', sans-serif;
+font-family: 'Barlow Condensed', sans-serif;
+font-family: 'Comfortaa', cursive;
+font-family: 'Quattrocento Sans', sans-serif;
+font-family: 'Cantarell', sans-serif;
+font-family: 'M PLUS 1p', sans-serif;
+*/

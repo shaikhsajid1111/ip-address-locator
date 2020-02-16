@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IP Address Locator</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/5de3ed83f2.js" crossorigin="anonymous"></script>
+    
+    <link rel="shortcut icon" href="{% static 'image/favicon.png' %}">
+    
+
+      <nav class="navbar navbar-expand-lg">
+        <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon "> 
+            <i class="fa fa-navicon" style="color:#fff; font-size:28px;"></i>
+
+          </span>
+        </button>
+        <a class="navbar-brand text-white" href="#">IP locator <i class="fa fa-map-marker-alt"></i> </a>
+      
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <form class="form-inline my-2 my-lg-0 ml-auto" method="POST">
+              {%csrf_token%}
+            <input class="form-control mr-sm-2" autocomplete="off" name="ip_address" id="ip_address" type="text" placeholder="Search IP" aria-label="Search" required>
+            <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+
+
+</head>
+<!-- #e3f2fd -->
+<body>
+
+    <div class="container-fluid">
+        <div class="container">
+            <br>
+    <h3 class="text-center detection">IP Address Detected : <b>{{ data.ip }}</b></h3>
+    <br>
+</div>
+    </div>
+
+
+
+
+
+
+
+<div class="container-fluid">
+  <center>
+<table class="table table-hover table-responsive-md text-center">
+        
+    <thead>
+    <tr>   
+            <th class="text-light">Attributes</th> 
+            <th class="text-light">Data</th>
+
+    </tr>
+
+    </thead>
+    
+    
+    <tbody>
+    <tr>
+        <td>Address</td>
+        <td>{{data.address}}</td>
+    </tr>
+
+    <tr>
+        <td>City</td>
+        <td><i class="fa fa-info-circle"></i><a href="{{page_link}}" target="_blank" rel="noopener">{{data.city}}</a> </td>
+    </tr>
+    <tr>
+        <td>Postal</td>
+        <td>{{data.postal}}</td>
+    </tr>
+    
+    <tr>
+        <td>Region</td>
+        <td>{{data.raw.region}}</td>
+    </tr>
+    <tr>
+        <td>State</td>
+        <td>{{data.state}}</td>
+    </tr>
+    
+    <tr>
+        <td>Country</td>
+        <td>{{data.country}}</td>
+    </tr>
+    
+    <tr>
+        <td>Organisation</td>
+        <td>{{data.org}}</td>
+    </tr>
+    <tr>
+        <td>Latitude</td>
+        <td>{{data.lat}}</td>
+    </tr>
+
+    <tr>
+        <td>Longitude</td>
+        <td>{{data.lng}}</td>
+    </tr>
+     <tr>
+        <td>Timezone</td>
+        <td>{{data.raw.timezone}}</td>
+    </tr>
+    
+</tbody>
+    
+</table>
+</center>
+
+
+
+
+</div>
+  <!-- <div class="embed-responsive embed-responsive-21by9">
+    <iframe class="embed-responsive-item" src="{{ map_url }}" allowfullscreen></iframe>
+  </div>     
+    
+    <script src="{% static 'js/index.js' %}"></script>
+</body>
+
+
+<!-- Footer -->
+<footer class="page-footer font-small pt-3">
+
+    <!-- Footer Elements -->
+    <div class="container">
+  
+      <!-- Grid row-->
+      <div class="row" id="social-media-container" >
+  
+        <!-- Grid column -->
+        <div class="col-md-12 text-center">
+          <div class="mt-3 flex-center">
+  
+            <!-- Facebook -->
+                <a class="fb-ic" href="https://facebook.com/shaikhsajid1111" target="_blank" rel="noopener">
+              <i class="fab fa-facebook-f fa-2x white-text mr-3 fa-lg"> </i>
+            </a>
+            <!-- Twitter -->
+            <a class="tw-ic" href="https://twitter.com/shaikhsajid1111" target="_blank" rel="noopener">
+              <i class="fab fa-twitter white-text mr-3 fa-lg fa-2x"> </i>
+            </a>
+            <!-- Google +-->
+            <a class="git-ic" href="https://github.com/shaikhsajid1111" target="_blank" rel="noopener">
+              <i class="fab fa-github white-text mr-3 fa-lg fa-2x"> </i>
+            </a>
+            <!--Instagram-->
+            <a class="ins-ic" href="https://instagram.com/shaikhsajid1111" target="_blank" rel="noopener">
+              <i class="fab fa-instagram white-text mr-3 fa-lg fa-2x"> </i>
+            </a>
+            
+          </div>
+        </div>
+        <!-- Grid column -->
+  
+      </div>
+      <!-- Grid row-->
+      
+    </div>
+    <!-- Footer Elements -->
+  
+     <!-- Copyright -->
+    <div class="footer-copyright text-center py-3 text-white"> © 2020 Copyright:
+      <a href="https://instagram.com/shaikhsajid1111" class="text-warning" target="_blank" rel="noopener"> Sajid Shaikh</a> 
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer -->
+
+
+
+</html>
