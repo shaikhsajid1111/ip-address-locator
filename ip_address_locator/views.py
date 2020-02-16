@@ -1,12 +1,10 @@
 from django.shortcuts import render
-import geocoder as GC
+import geocoder 
 import wikipedia as wk
-# Create your views here.
-import os
 
 def find_ip_address(ips = 'me'):
     try:
-        return (GC.ip(ips)).json
+        return (geocoder.ip(ips)).json
     except:
         return find_ip_address()    
 def get_url(keyword):
@@ -18,7 +16,7 @@ API_KEY = open('key.txt','r').read()
 #https://maps.google.com/?q=<lat>,<lng>
 def get_map_url(lat,lng):
     try:
-        return f'https://www.google.com/maps/embed/v1/place?key={API_KEY}&q='+str(lat)+','+str(lng)
+        return f'https://www.google.com/maps/embed/v1/place?key={API_KEY}&q={lat},{lng}'
     except:
         return f'https://www.google.com/maps/embed/v1/place?key={API_KEY}&q='
 def index(request):

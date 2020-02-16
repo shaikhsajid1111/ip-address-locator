@@ -7,9 +7,8 @@ function ValidateIPaddress(ipaddress) {
     return (false);
       
   }  
-//!patt.exec($("#ip_address").val())
 $('document').ready(function(){
-    var patt = /[0-9 .]/g;
+    
     
     $('#ip_address').change(function(){
         ValidateIPaddress($("#ip_address").val());
