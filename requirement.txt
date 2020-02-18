@@ -1,0 +1,4 @@
+Django==3.0.2
+geocoder==1.38.1
+wikipedia==1.4.0
+python >= 3.7 

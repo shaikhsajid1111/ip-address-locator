@@ -14,7 +14,6 @@ body{
     margin: 0;
     padding: 0;
     min-height: 100%;
-    
 }
 nav{
     background-color: var(--main-bg-color) !important;
@@ -77,11 +76,11 @@ thead{
 .page-footer:hover{
     height: 20vh !important;
 }
+    /*if screen size is lesser than 768px, phones screen*/
 @media only screen and (max-width: 768px) {
     .page-footer{
         height: 15vh !important;
     }
-
 }
 /*
 font-family: 'Oxygen', sans-serif;

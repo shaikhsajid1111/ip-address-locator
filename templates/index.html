@@ -15,23 +15,28 @@
 
     <title>IP Address Locator</title>
     {% load static %}
+    <!--local stylesheet-->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>  <!--Jquery CDN-->
+    <!--Bootstrap CDN-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>  
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <!--font awesome CDN-->
     <script src="https://kit.fontawesome.com/5de3ed83f2.js" crossorigin="anonymous"></script>
-    
+    <!--Favicon-->
     <link rel="shortcut icon" href="{% static 'image/favicon.png' %}">
     
 
+    <!--Navigation Bar-->
       <nav class="navbar navbar-expand-lg">
         <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon "> 
-            <i class="fa fa-navicon" style="color:#fff; font-size:28px;"></i>
+     <!--navbar toggle icon-->       <i class="fa fa-navicon" style="color:#fff; font-size:28px;"></i>
 
           </span>
         </button>
+        <!--navbar brand name-->
         <a class="navbar-brand text-white" href="#">IP locator <i class="fa fa-map-marker-alt"></i> </a>
       
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
@@ -43,9 +48,8 @@
         </div>
       </nav>
 
-
 </head>
-<!-- #e3f2fd -->
+
 <body>
 
     <div class="container-fluid">
@@ -56,14 +60,9 @@
 </div>
     </div>
 
-
-
-
-
-
-
 <div class="container-fluid">
   <center>
+    <!--table to show data-->
 <table class="table table-hover table-responsive-md text-center">
         
     <thead>
@@ -132,10 +131,11 @@
 
 
 </div>
+<!--Google Map Embed iframe-->
   <div class="embed-responsive embed-responsive-21by9">
-    <iframe class="embed-responsive-item" src="{{ map_url }}" allowfullscreen></iframe>
+    <iframe class="embed-responsive-item" src="{{ map_url }}" title="Google Map Location"allowfullscreen></iframe>
   </div>     
-    
+    <!--Local js-->
     <script src="{% static 'js/index.js' %}"></script>
 </body>
 
@@ -161,7 +161,7 @@
             <a class="tw-ic" href="https://twitter.com/shaikhsajid1111" target="_blank" rel="noopener">
               <i class="fab fa-twitter white-text mr-3 fa-lg fa-2x"> </i>
             </a>
-            <!-- Google +-->
+            <!-- Github +-->
             <a class="git-ic" href="https://github.com/shaikhsajid1111" target="_blank" rel="noopener">
               <i class="fab fa-github white-text mr-3 fa-lg fa-2x"> </i>
             </a>
