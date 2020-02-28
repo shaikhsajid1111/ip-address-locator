@@ -12,7 +12,7 @@ def find_ip_address(ips = 'me'):
 #function to generate link of wikipedia by fetching results from wikipedia
 def get_url(keyword):
     links = wk.search(keyword)          #searching of keyword in wikipedia's website
-    page = wk.page(links[1])                #taking 1st result
+    page = wk.page(links[0])                #taking 1st result
     return page.url
 
 
