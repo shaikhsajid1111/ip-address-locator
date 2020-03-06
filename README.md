@@ -1,5 +1,5 @@
 # IP Address Locator
-**Search IP Address.with location on Google Map**
+**Search IP Address along with location on Google Map**
 
 # Features
 - Finds IP address 

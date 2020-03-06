@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Abel|Barlow+Condensed|Cantarell|Comfortaa|Karla|M+PLUS+1p|Oxygen|Quattrocento+Sans&display=swap');
+/*defining colors variable in root for reusing it*/
 :root{
     --main-bg-color : #117A65;
     --navbar-font : 'Comfortaa', cursive; 
@@ -82,13 +83,3 @@ thead{
         height: 15vh !important;
     }
 }
-/*
-font-family: 'Oxygen', sans-serif;
-font-family: 'Karla', sans-serif;
-font-family: 'Abel', sans-serif;
-font-family: 'Barlow Condensed', sans-serif;
-font-family: 'Comfortaa', cursive;
-font-family: 'Quattrocento Sans', sans-serif;
-font-family: 'Cantarell', sans-serif;
-font-family: 'M PLUS 1p', sans-serif;
-*/

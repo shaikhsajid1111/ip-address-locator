@@ -5,13 +5,13 @@ function ValidateIPaddress(ipaddress) {
       return (true);  
     }  
     alert("You have entered an invalid IP address!");   
-    $("#ip_address").val("");         /*Clearing the input */
+    $("#ip_address").val("");         /*Clearing the input field*/
     return (false);
       
   }  
 $('document').ready(function(){
     
-    /*If ip is changed */
+    /*If ip input is change, than it automatically calls for validation*/
     $('#ip_address').change(function(){   
         ValidateIPaddress($("#ip_address").val());
         
