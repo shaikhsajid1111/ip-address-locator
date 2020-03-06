@@ -1,6 +1,18 @@
 # IP Address Locator
 **Search IP Address along with location on Google Map**
 
+
+
+
+![Screenshot](screenshot/capture.png)
+
+
+
+![GIF](screenshot/ip-video.gif)
+
+
+
+
 # Features
 - Finds IP address 
 - Provide IP address details with current location which includes Longtitude, latitude,city,country etc.
