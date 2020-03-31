@@ -1,6 +1,7 @@
 from django.shortcuts import render
 import geocoder             #for locating IP address
 import wikipedia as wk          #to fetch IP address's location and details about that location
+from django.views.decorators.csrf import csrf_exempt
 #by defaault it,using default parameters, it finds user's IP location automatically
 #'me' represents, that it's user's IP address
 def find_ip_address(ips = 'me'):
@@ -30,10 +31,11 @@ def get_map_url(lat,lng):
     except:
         return f'https://www.google.com/maps/embed/v1/place?key={API_KEY}&q='
 
-'''index function to render template's html and data'''        
+'''index function to render template's html and data'''
+@csrf_exempt        
 def index(request):
-    if 'ip_address' in request.POST:            #fetching IP address from template
-        data = find_ip_address(request.POST['ip_address'])  #if user enters data than it'll find it's IP details
+    if 'ip_address' in request.GET:            #fetching IP address from template
+        data = find_ip_address(request.GET['ip_address'])  #if user enters data than it'll find it's IP details
     else:
         data = find_ip_address()    #if IP field is empty,it'll return user's address by default parameters
     try:

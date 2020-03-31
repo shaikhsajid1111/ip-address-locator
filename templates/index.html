@@ -40,8 +40,8 @@
         <a class="navbar-brand text-white" href="#">IP locator <i class="fa fa-map-marker-alt"></i> </a>
       
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-          <form class="form-inline my-2 my-lg-0 ml-auto" method="POST">
-              {%csrf_token%}
+          <form class="form-inline my-2 my-lg-0 ml-auto" method="GET">
+              
             <input class="form-control mr-sm-2" autocomplete="off" name="ip_address" id="ip_address" type="text" placeholder="Search IP" aria-label="Search" required>
             <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Search</button>
           </form>
